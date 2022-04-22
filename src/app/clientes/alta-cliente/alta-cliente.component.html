@@ -1,0 +1,34 @@
+
+
+<div class="container">
+    <h2>Alta cliente</h2>
+    <p>
+     <span>Nombre: </span><br>
+     <input type="text" [(ngModel)]="cliente.nombre" >
+    </p>
+    <p>
+     <span>Apellido: </span><br>
+     <input type="text" [(ngModel)]="cliente.apellido">
+    </p>
+    <p>
+     <span>Dni: </span><br>
+     <input type="number" [(ngModel)]="cliente.dni">
+    </p>
+    <p>
+     <span>Correo: </span><br>
+     <input type="text" [(ngModel)]="cliente.correo">
+    </p>
+    <p>
+       <span>Grupo: </span>
+            <select [(ngModel)]="cliente.grupo">
+                <option *ngFor="let grupo of grupos"
+                 value="{{grupo.id}}">{{grupo.nombre}}</option>
+           </select>
+    </p>
+    <br>
+    <p>
+     <button (click)="this.nuevoCliente()" class="btn btn-primary">Guardar</button>
+    </p>
+    
+
+</div>
